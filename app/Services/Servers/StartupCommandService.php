@@ -12,7 +12,7 @@ class StartupCommandService
     public function handle(Server $server, bool $hideAllValues = false): string
     {
         $find = ['{{SERVER_MEMORY}}', '{{SERVER_IP}}', '{{SERVER_PORT}}'];
-        $replace = [$server->memory, $server->allocation->ip, $server->allocation->port];
+        $replace = [$server->memory * 0.95, $server->allocation->ip, $server->allocation->port];
 
         foreach ($server->variables as $variable) {
             $find[] = '{{' . $variable->env_variable . '}}';
