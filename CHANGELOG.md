@@ -3,6 +3,10 @@ This file is a running track of new features and fixes to each version of the pa
 
 This project follows [Semantic Versioning](http://semver.org) guidelines.
 
+## v1.12.0
+
+* Better support for running inside LXC containers
+
 ## v1.11.10
 
 ### BREAKING
